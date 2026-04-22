@@ -1,0 +1,35 @@
+[
+  {
+    "id": "p1",
+    "name": "Rahul Sen",
+    "role": "Founder & Publisher",
+    "image": "https://i.ibb.co/1.jpg",
+    "about": "Rahul Sen is the visionary founder of Placentapublication, with over a decade of experience in the publishing industry. He specializes in content strategy, author development, and bringing impactful stories to life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "email": "rahul@example.com"
+
+},
+  {
+    "id": "p2",
+    "name": "Ananya Das",
+    "role": "Senior Editor",
+    "image": "https://i.ibb.co/2.jpg",
+    "about":
+      "Ananya Das is a passionate editor known for refining manuscripts into compelling narratives. She has worked with numerous authors to enhance clarity, tone, and structure. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    "id": "p3",
+    "name": "Sourav Roy",
+    "role": "Creative Designer",
+    "image": "https://i.ibb.co/3.jpg",
+    "about":
+      "Sourav Roy leads the creative design team, crafting visually stunning book covers and layouts. His design approach blends creativity with market trends. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    "id": "p4",
+    "name": "Mita Ghosh",
+    "role": "Marketing Head",
+    "image": "https://i.ibb.co/4.jpg",
+    "about":
+      "Mita Ghosh manages marketing strategies, promotions, and brand outreach for Placentapublication. She ensures every book reaches the right audience effectively. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+]

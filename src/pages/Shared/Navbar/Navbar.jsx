@@ -9,18 +9,18 @@ export default function Navbar() {
 
     
     <NavLink  to='/' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Home</NavLink>
-    <NavLink  to='/about' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>About</NavLink>
-    <NavLink  to='/services' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Services</NavLink>
-    <NavLink  to='/Shop' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Blog</NavLink>
-    <NavLink  to='/Contact' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Contact</NavLink>
+    <NavLink  to='#about' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>About</NavLink>
+    <NavLink  to='#services' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Services</NavLink>
+    <NavLink  to='#Shop' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Blog</NavLink>
+    <NavLink  to='#Contact' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Contact</NavLink>
 
 
 
   </>
 
   return (
-    <nav className="w-full MdOutlineClose ed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-      <div className=" px-5 py-4 flex items-center justify-between">
+    <nav className="w-full  fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <div className=" px-5 flex items-center justify-between">
 
         {/* Logo */}
         <div className="text-xl md:text-2xl font-bold text-green-700 flex items-center ">
