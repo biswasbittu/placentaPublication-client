@@ -3,33 +3,36 @@
     "id": "p1",
     "name": "Rahul Sen",
     "role": "Founder & Publisher",
-    "image": "https://i.ibb.co/1.jpg",
-    "about": "Rahul Sen is the visionary founder of Placentapublication, with over a decade of experience in the publishing industry. He specializes in content strategy, author development, and bringing impactful stories to life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "email": "rahul@example.com"
-
-},
+    "image": "https://i.ibb.co/LdhP5yCD/IMG-20241223-WA0004.jpg",
+    "bio": "Visionary leader with 10+ years in publishing.",
+    "about": "Rahul Sen is the founder of Placentapublication, specializing in content strategy and author development. He has helped many writers publish impactful books. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "skills": ["Publishing", "Content Strategy", "Leadership", "Editing"]
+  },
   {
     "id": "p2",
     "name": "Ananya Das",
     "role": "Senior Editor",
-    "image": "https://i.ibb.co/2.jpg",
-    "about":
-      "Ananya Das is a passionate editor known for refining manuscripts into compelling narratives. She has worked with numerous authors to enhance clarity, tone, and structure. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://i.ibb.co/hF5hmy5p/rajip-img.jpg",
+    "bio": "Expert editor focused on storytelling clarity.",
+    "about": "Ananya Das is a skilled editor who transforms manuscripts into engaging stories. She ensures clarity, tone, and structure are perfect. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "skills": ["Editing", "Proofreading", "Storytelling", "Grammar"]
   },
   {
     "id": "p3",
     "name": "Sourav Roy",
     "role": "Creative Designer",
-    "image": "https://i.ibb.co/3.jpg",
-    "about":
-      "Sourav Roy leads the creative design team, crafting visually stunning book covers and layouts. His design approach blends creativity with market trends. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "https://i.ibb.co/39GCpr4V/prosanta.jpg",
+    "bio": "Creative mind behind stunning book designs.",
+    "about": "Sourav Roy designs eye-catching book covers and layouts. His work blends creativity with modern trends. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "skills": ["UI Design", "Book Cover Design", "Photoshop", "Branding"]
   },
   {
     "id": "p4",
     "name": "Mita Ghosh",
     "role": "Marketing Head",
-    "image": "https://i.ibb.co/4.jpg",
-    "about":
-      "Mita Ghosh manages marketing strategies, promotions, and brand outreach for Placentapublication. She ensures every book reaches the right audience effectively. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
+    "image": "https://i.ibb.co/wrRd2KnK/download.jpg",
+    "bio": "Drives brand growth and audience reach.",
+    "about": "Mita Ghosh handles marketing strategies and promotions. She ensures books reach the right audience effectively. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "skills": ["Marketing", "SEO", "Social Media", "Campaign Strategy"]
+  }
 ]
