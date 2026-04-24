@@ -1,8 +1,10 @@
+
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-gray-300 pt-16 pb-8">
+    <div className="container mx-auto">
+      <footer className="bg-[#0f172a] text-gray-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-10">
 
         {/* Logo + About */}
@@ -78,5 +80,6 @@ export default function Footer() {
         © {new Date().getFullYear()} LifeCoach. All rights reserved.
       </div>
     </footer>
+    </div>
   );
 }

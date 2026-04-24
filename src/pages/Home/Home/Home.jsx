@@ -1,20 +1,30 @@
-import React, { useEffect } from 'react';
+
+import { useLoaderData } from 'react-router';
 import Banner from '../Banner/Banner';
-import { useState } from 'react';
-import Team from '../Team/Team';
+import Teams from '../Teams/Teams';
+
 
 
 const Home = () => {
-    const [team,setTeam]=useState([])
 
-    useEffect(()=>{
-        fetch('team.json').then(res=>res.json()).then(data=>setTeam(data))
-    },[])
+    const teams = useLoaderData();
+    console.log(teams)
+    
+    
+
     return (
-        <div>
-            <div className='pt-16 lg:pt-24'>
-                <Banner/>
-                <Team team={team}/>
+        <div className='pt-16 lg:pt-24'>
+            <div className='' >
+                <Banner />
+                <div className='pt-16 lg:pt-24'>
+                    <h1 className='text-center text-4xl md:text-6xl underline my-2'>Our Team</h1>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3  gap-8 p-5 '>
+                        {
+                            teams.map((team) => <Teams key={team.id} team={team}></Teams>)
+                        }
+                    </div>
+                </div>
+
             </div>
         </div>
     );

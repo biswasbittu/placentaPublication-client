@@ -1,6 +1,6 @@
 [
   {
-    "id": "p1",
+    "id": 1,
     "name": "Rahul Sen",
     "role": "Founder & Publisher",
     "image": "https://i.ibb.co/LdhP5yCD/IMG-20241223-WA0004.jpg",
@@ -9,7 +9,7 @@
     "skills": ["Publishing", "Content Strategy", "Leadership", "Editing"]
   },
   {
-    "id": "p2",
+    "id": 2,
     "name": "Ananya Das",
     "role": "Senior Editor",
     "image": "https://i.ibb.co/hF5hmy5p/rajip-img.jpg",
@@ -18,7 +18,7 @@
     "skills": ["Editing", "Proofreading", "Storytelling", "Grammar"]
   },
   {
-    "id": "p3",
+    "id": 3,
     "name": "Sourav Roy",
     "role": "Creative Designer",
     "image": "https://i.ibb.co/39GCpr4V/prosanta.jpg",
@@ -27,7 +27,7 @@
     "skills": ["UI Design", "Book Cover Design", "Photoshop", "Branding"]
   },
   {
-    "id": "p4",
+    "id": 4,
     "name": "Mita Ghosh",
     "role": "Marketing Head",
     "image": "https://i.ibb.co/wrRd2KnK/download.jpg",

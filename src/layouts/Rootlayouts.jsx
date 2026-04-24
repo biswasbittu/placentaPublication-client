@@ -5,7 +5,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 
 const Rootlayouts = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='max-w-7xl mx-auto'>
             <Navbar/>
             <Outlet/>
             <Footer/>
