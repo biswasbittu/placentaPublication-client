@@ -6,7 +6,7 @@ import { useLoaderData, useParams } from 'react-router';
 const MembersDetails = () => {
     const { id } = useParams()
     const teams = useLoaderData()
-    console.log(teams)
+    
     const membersDetails = teams.find(t => t.id === parseInt(id))
     console.log(membersDetails)
     const { image, name,skills,bio,about } = membersDetails
@@ -20,38 +20,6 @@ const MembersDetails = () => {
         <div className='pt-16 md:pt-24 container mx-auto my-8'>
             <h1 className='text-center text-4xl md:text-6xl '>{name}</h1>
             <div className='flex flex-col md:flex-row justify-between  gap-4  '>
-
-                {/* <div className=" hero bg-base-200 min-h-screen">
-                        <div className="hero-content flex-col lg:flex-row gap-12">
-                            <div className='flex-1   flex flex-col gap-4'>
-                                <img
-                                    src={image}
-                                    className="max-w-sm rounded-lg shadow-2xl"
-                                />
-                                <h1 className='text-4xl md:text-6xl text-gray-600 '>{name}</h1>
-                                <div className='flex gap-12 text-gray-500 items-start justify-start'>
-                                    <FaFacebookF /> <FaInstagram /> <FaXTwitter /> <FaYoutube />
-                                </div>
-                            </div>
-                            <div className='flex-1 border-2'>
-                                <h1 className="text-5xl font-bold my-12">Box Office News!</h1>
-                                <div className="join">
-                                    <button className="join-item btn rounded-none bg-white text-black border border-gray-300 hover:bg-gray-100">
-                                        Bio
-                                    </button>
-
-                                    <button className="join-item btn rounded-none bg-white text-black border border-gray-300 hover:bg-gray-100">
-                                        Skills
-                                    </button>
-
-                                    <button className="join-item btn rounded-none bg-green-600 text-white border border-green-600 hover:bg-green-700">
-                                        Send Message
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> */}
 
                 <div className='flex-1  '>
                     <figure>

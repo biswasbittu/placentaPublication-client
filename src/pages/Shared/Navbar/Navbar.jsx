@@ -8,10 +8,10 @@ export default function Navbar() {
   const links = <>
 
     
-    <NavLink  to='/' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Home</NavLink>
+    <NavLink  to='/' className={({isActive})=>isActive ? "text-green-600 underline" : "hover:text-green-600 text-black" }>Home</NavLink>
     <NavLink  to='#about' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>About</NavLink>
     <NavLink  to='#services' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Services</NavLink>
-    <NavLink  to='#Shop' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Blog</NavLink>
+    <NavLink  to='/Shop' className={({isActive})=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>BookS Shop</NavLink>
     <NavLink  to='#Contact' className={(isActive)=>isActive ? "text-green-600 underline" : "hover:text-green-600" }>Contact</NavLink>
 
 
@@ -34,7 +34,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <button className="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
+          <button className="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition cursor-pointer">
             Get Started
           </button>
         </div>
@@ -60,7 +60,11 @@ export default function Navbar() {
           {/* <button className="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
             Get Started
           </button> */}
-          <Link className="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition ">Get Started</Link>
+          <button className="">
+            <Link className="w-full bg-green-600 text-white py-2 
+          rounded-full hover:bg-green-700 transition cursor-pointer "
+          >Get Started</Link>
+          </button>
         </div>
       </div>
     </nav>
