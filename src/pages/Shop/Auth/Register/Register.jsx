@@ -1,26 +1,36 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router';
+import useAuth from '../../../../hooks/useAuth';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    const {createUser}=useAuth()
     const { register, handleSubmit, formState: { errors }, watch, } = useForm();
     const password = watch("password");
 
     const handleRegister = (data) => {
-        console.log(data);
+        const {email,password}=(data);
+        // console.log(email,password)
+        createUser(email, password)
+        .then(result=>console.log(result.user))
+        .catch(error=>console.log(error.message))
     };
 
     return (
         <div>
-            <div className="w-full max-w-md bg-white rounded-3xl shadow-lg p-8  lg:ml-36">
+            <div className="w-full max-w-md md:max-w-xl bg-white rounded-3xl shadow-lg p-8  lg:ml-36">
                 <div className="text-center mb-8">
                     <h2 className="text-4xl font-bold text-gray-800">
                         Create Your Account
                     </h2>
                     <p className="text-gray-500 mt-2">
                         Already have an account?
+                        <Link to='/login'>
                         <span className="text-green-600 cursor-pointer ml-1">
                             Login
                         </span>
+                        </Link>
                     </p>
                 </div>
 
@@ -34,14 +44,17 @@ const Register = () => {
                             type="text"
                             placeholder="Enter your full name"
                             className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-green-600"
-                            {...register("fullname", {
-                                required: "Name is required",
+                            {...register("name", {
+                                required: "Full Name is required",
                                 pattern: {
                                     value: /^[A-Za-z]+(?:\s[A-Za-z]+)*$/,
                                     message: "Only letters and one space allowed",
                                 },
                             })}
                         />
+                        {/* {errors.name?.type==="required"&&<p className="text-red-600 text-sm mt-1">
+                                "Name is required"
+                            </p>} */}
                         {errors.name && (
                             <p className="text-red-600 text-sm mt-1">
                                 {errors.name.message}
@@ -96,11 +109,13 @@ const Register = () => {
                                 },
                             })}
                         />
-                        {errors.password && (
+                       <div >
+                         {errors.password && (
                             <p className="text-red-600 text-sm mt-1">
                                 {errors.password.message}
                             </p>
                         )}
+                       </div>
                     </div>
 
                     {/* Confirm Password */}
@@ -129,15 +144,17 @@ const Register = () => {
                         />
                         <p className="text-sm text-gray-600">
                             I agree to the
-                            <span className="text-green-600 cursor-pointer ml-1">
+                            <span className="text-green-600 cursor-pointer ml-1 ">
                                 Terms & Conditions
                             </span>
                         </p>
-                        {errors.terms && (
-                            <p className="text-red-600 text-sm mt-1">
+                       <div className='h-5'>
+                         {errors.terms && (
+                            <p className="text-red-600 text-sm mt-1 ">
                                 {errors.terms.message}
                             </p>
                         )}
+                       </div>
                     </div>
 
                     {/* Button */}
@@ -151,20 +168,9 @@ const Register = () => {
                     {/* Social Buttons */}
 
                 </form>
-                <div className="flex gap-4 pt-4">
-                    <button
-                        type="button"
-                        className="flex-1 border border-gray-300 rounded-xl py-3 hover:bg-gray-50 transition"
-                    >
-                        Google
-                    </button>
-
-                    <button
-                        type="button"
-                        className="flex-1 border border-gray-300 rounded-xl py-3 hover:bg-gray-50 transition"
-                    >
-                        Facebook
-                    </button>
+                <div className="pt-4 flex justify-center gap-4 w-full">
+                   <SocialLogin/>
+                   
                 </div>
             </div>
         </div>

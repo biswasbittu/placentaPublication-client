@@ -9,7 +9,7 @@ const MembersDetails = () => {
     
     const membersDetails = teams.find(t => t.id === parseInt(id))
     console.log(membersDetails)
-    const { image, name,skills,bio,about } = membersDetails
+    const { image, name,skills,bio,about,role } = membersDetails
      const [activeTab, setActiveTab] = useState("bio");
      const handleMessage=(e)=>{
         e.preventDefault()
@@ -29,6 +29,7 @@ const MembersDetails = () => {
                                 className="w-2/3 rounded-lg shadow-2xl"
                             />
                             <h1 className='text-4xl md:text-6xl text-gray-600 '>{name}</h1>
+                            <p className='text-xl '>{role}</p>
                             <div className='flex gap-12 text-gray-500 items-start justify-start'>
                                 <FaFacebookF /> <FaInstagram /> <FaXTwitter /> <FaYoutube />
                             </div>

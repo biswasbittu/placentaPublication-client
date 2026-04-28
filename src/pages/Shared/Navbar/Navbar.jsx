@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX, } from "react-icons/fi";
 import Logo from "../../../component/Logo/Logo";
-import { Link, NavLink } from "react-router";
+import { Link, Links, NavLink } from "react-router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,7 +19,8 @@ export default function Navbar() {
   </>
 
   return (
-    <nav className="w-full  fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <div className="container mx-auto">
+      <nav className="w-full  fixed top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className=" px-5 flex items-center justify-between">
 
         {/* Logo */}
@@ -34,9 +35,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
+          <Link to='/login'>
           <button className="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition cursor-pointer">
             Get Started
           </button>
+          </Link>
         </div>
 
         {/* Mobile Icon */}
@@ -60,13 +63,15 @@ export default function Navbar() {
           {/* <button className="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition">
             Get Started
           </button> */}
-          <button className="">
-            <Link className="w-full bg-green-600 text-white py-2 
-          rounded-full hover:bg-green-700 transition cursor-pointer "
-          >Get Started</Link>
+          <Link to='/login'>
+          <button className="w-full bg-green-600 text-white py-2 
+          rounded-full hover:bg-green-700 transition cursor-pointer">           
+          Get Started
           </button>
+          </Link>
         </div>
       </div>
     </nav>
+    </div>
   );
 }

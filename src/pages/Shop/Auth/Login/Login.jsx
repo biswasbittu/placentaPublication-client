@@ -1,11 +1,24 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router';
+import useAuth from '../../../../hooks/useAuth';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
+    const {signinUser}=useAuth()
     const { register,handleSubmit,formState: { errors }, watch, } = useForm();
     const password = watch("password");
+
+
     const handleLogin = (data) => {
-        console.log(data);
+        const{email,password}=(data);
+        signinUser(email,password)
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.log(error.message)
+        })
     };
     return (
         <div>
@@ -17,9 +30,11 @@ const Login = () => {
                     </h2>
                     <p className="text-gray-500 mt-2">
                         Don't have an account?
+                        <Link to='/register'>
                         <span className="text-green-600 cursor-pointer ml-1">
                             register
                         </span>
+                        </Link>
                     </p>
                 </div>
 
@@ -94,6 +109,11 @@ const Login = () => {
                                     value === password || "Passwords do not match",
                             })}
                         />
+                        {errors.confirmPassword && (
+                            <p className="text-red-600 text-sm mt-1">
+                                {errors.confirmPassword.message}
+                            </p>
+                        )}
                     </div>
 
                     
@@ -109,20 +129,9 @@ const Login = () => {
                     {/* Social Buttons */}
 
                 </form>
-                <div className="flex gap-4 pt-4">
-                    <button
-                        type="button"
-                        className="flex-1 border border-gray-300 rounded-xl py-3 hover:bg-gray-50 transition"
-                    >
-                        Google
-                    </button>
-
-                    <button
-                        type="button"
-                        className="flex-1 border border-gray-300 rounded-xl py-3 hover:bg-gray-50 transition"
-                    >
-                        Facebook
-                    </button>
+                <div className="pt-4 flex justify-center gap-4 w-full">
+                   <SocialLogin/>
+                   
                 </div>
             </div>
         </div>
